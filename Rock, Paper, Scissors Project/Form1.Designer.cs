@@ -37,6 +37,10 @@
             this.radRock = new System.Windows.Forms.RadioButton();
             this.lblTitle2 = new System.Windows.Forms.Label();
             this.lblTitle3 = new System.Windows.Forms.Label();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.lblReset = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgComputer)).BeginInit();
             this.grpChoices.SuspendLayout();
@@ -60,6 +64,7 @@
             this.imgPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPlayer.TabIndex = 1;
             this.imgPlayer.TabStop = false;
+            this.imgPlayer.Visible = false;
             // 
             // imgComputer
             // 
@@ -69,6 +74,7 @@
             this.imgComputer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgComputer.TabIndex = 3;
             this.imgComputer.TabStop = false;
+            this.imgComputer.Visible = false;
             // 
             // grpChoices
             // 
@@ -81,6 +87,7 @@
             this.grpChoices.TabIndex = 4;
             this.grpChoices.TabStop = false;
             this.grpChoices.Text = "Player Choice";
+            this.grpChoices.Visible = false;
             // 
             // radScissors
             // 
@@ -127,6 +134,7 @@
             this.lblTitle2.Size = new System.Drawing.Size(63, 23);
             this.lblTitle2.TabIndex = 5;
             this.lblTitle2.Text = "USER";
+            this.lblTitle2.Visible = false;
             // 
             // lblTitle3
             // 
@@ -137,6 +145,51 @@
             this.lblTitle3.Size = new System.Drawing.Size(123, 23);
             this.lblTitle3.TabIndex = 6;
             this.lblTitle3.Text = "COMPUTER";
+            this.lblTitle3.Visible = false;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.Location = new System.Drawing.Point(316, 110);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(190, 35);
+            this.btnPlay.TabIndex = 7;
+            this.btnPlay.Text = "Open Play Menu";
+            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(353, 180);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(116, 23);
+            this.btnReset.TabIndex = 8;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Visible = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // lblReset
+            // 
+            this.lblReset.AutoSize = true;
+            this.lblReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReset.Location = new System.Drawing.Point(313, 219);
+            this.lblReset.Name = "lblReset";
+            this.lblReset.Size = new System.Drawing.Size(184, 16);
+            this.lblReset.TabIndex = 9;
+            this.lblReset.Text = "I can\'t allow this. Keep playing";
+            this.lblReset.Visible = false;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(353, 151);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(116, 23);
+            this.btnStart.TabIndex = 10;
+            this.btnStart.Text = "Start Game";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Visible = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // frmRPS
             // 
@@ -144,6 +197,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.lblReset);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.lblTitle3);
             this.Controls.Add(this.lblTitle2);
             this.Controls.Add(this.grpChoices);
@@ -172,6 +229,10 @@
         private System.Windows.Forms.RadioButton radRock;
         private System.Windows.Forms.Label lblTitle2;
         private System.Windows.Forms.Label lblTitle3;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label lblReset;
+        private System.Windows.Forms.Button btnStart;
     }
 }
 
