@@ -12,12 +12,12 @@ namespace Rock__Paper__Scissors_Project
 {
     public partial class frmRPS : Form
     {
-        
-
+        Random generator = new Random();
+        int Computer;
         public frmRPS()
         {
             InitializeComponent();
-            Random generator = new Random();
+            
         }
 
         private void radRock_CheckedChanged(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace Rock__Paper__Scissors_Project
             lblTitle.Visible = false;
             btnPlay.Visible = false;
             btnReset.Visible = true;
-            btnStart.Visible = true;
+            btnRoll.Visible = true;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -53,9 +53,20 @@ namespace Rock__Paper__Scissors_Project
             lblReset.Visible = true;
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnRoll_Click(object sender, EventArgs e)
         {
+
+            Computer = generator.Next(1, 4);
+                if (Computer == 1) 
+            imgComputer.Image = Properties.Resources.Rock;
             
-        }
+                else if (Computer == 2) 
+            imgComputer.Image = Properties.Resources.paper;
+            
+                else if (Computer == 3)
+            imgComputer.Image = Properties.Resources.Small_pair_of_blue_scissors;
+
+            
+        }    
     }
 }

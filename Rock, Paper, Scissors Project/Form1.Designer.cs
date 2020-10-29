@@ -40,7 +40,7 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.lblReset = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
+            this.btnRoll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgComputer)).BeginInit();
             this.grpChoices.SuspendLayout();
@@ -180,16 +180,16 @@
             this.lblReset.Text = "I can\'t allow this. Keep playing";
             this.lblReset.Visible = false;
             // 
-            // btnStart
+            // btnRoll
             // 
-            this.btnStart.Location = new System.Drawing.Point(353, 151);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(116, 23);
-            this.btnStart.TabIndex = 10;
-            this.btnStart.Text = "Start Game";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Visible = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnRoll.Location = new System.Drawing.Point(353, 151);
+            this.btnRoll.Name = "btnRoll";
+            this.btnRoll.Size = new System.Drawing.Size(116, 23);
+            this.btnRoll.TabIndex = 10;
+            this.btnRoll.Text = "Roll";
+            this.btnRoll.UseVisualStyleBackColor = true;
+            this.btnRoll.Visible = false;
+            this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
             // frmRPS
             // 
@@ -197,7 +197,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.btnRoll);
             this.Controls.Add(this.lblReset);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnPlay);
@@ -232,7 +232,7 @@
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblReset;
-        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnRoll;
     }
 }
 
