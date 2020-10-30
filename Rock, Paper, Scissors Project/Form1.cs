@@ -15,11 +15,16 @@ namespace Rock__Paper__Scissors_Project
         Random generator = new Random();
         int Computer;
         int number;
+        int Wins;
+        int Losses;
+        int Ties;
+        
+      
 
         public frmRPS()
         {
             InitializeComponent();
-            
+
         }
 
         private void radRock_CheckedChanged(object sender, EventArgs e)
@@ -42,6 +47,7 @@ namespace Rock__Paper__Scissors_Project
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            //This is start menu code
             lblTitle2.Visible = true;
             lblTitle3.Visible = true;
             imgComputer.Visible = true;
@@ -52,21 +58,38 @@ namespace Rock__Paper__Scissors_Project
             btnReset.Visible = true;
             btnRoll.Visible = true;
             btnTaunt.Visible = true;
-            btnInstructions.Visible = true;
+            btnRemove.Visible = true;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            lblReset.Visible = true;
+            Ties = 0;
+            lblTies.Text = "0";
+            Wins = 0;
+            lblWins.Text = "0";
+            Losses = 0;
+            lblLosses.Text = "0";
             lblTaunt.Visible = false;
             number = 0;
             lblRounds.Text = "0";
             btnReset.Enabled = false;
+            radRock.Checked = false;
+            radPaper.Checked = false;
+            radScissors.Checked = false;
+            imgPlayer.Image = Properties.Resources.Colour;
+            imgComputer.Image = Properties.Resources.Colour;
+            btnRoll.Enabled = false;
+
         }
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            lblReset.Visible = false;
+            Ties = Ties + 1;
+            Wins = Wins + 1;
+            Losses = Losses + 1;
+            number = number + 1;
+            lblRounds.Text = number.ToString();
+            btnReset.Enabled = true;
 
             Computer = generator.Next(1, 4);
             if (Computer == 1)
@@ -78,24 +101,76 @@ namespace Rock__Paper__Scissors_Project
             else if (Computer == 3)
                 imgComputer.Image = Properties.Resources.Small_pair_of_blue_scissors;
 
-            btnReset.Enabled = true;
+            //rock
+            if (radRock.Checked == true) 
 
-            number = number + 1;
-            lblRounds.Text = number.ToString();
+            if (Computer == 1)
+            {
+               
+               lblTies.Text = Ties.ToString();
+            }
+            else if (Computer == 2)
+            {
+                    
+                    lblLosses.Text = Losses.ToString();
+            }
+            else if (Computer == 3)
+            {
+               
+               lblWins.Text = Wins.ToString();
+            }
+
+            //paper
+            if (radPaper.Checked == true) 
+
+            if (Computer == 1)
+            {
+               
+               lblWins.Text = Ties.ToString();
+            }
+            else if (Computer == 2)
+            {
+              
+               lblTies.Text = Losses.ToString();
+            }
+            else if (Computer == 3)
+            {
+                    
+                    lblLosses.Text = Wins.ToString();
+            }
+
+            //scissors
+            if (radScissors.Checked == true) 
+
+            if (Computer == 1)
+            {
+                    
+                    lblLosses.Text = Ties.ToString();
+            }
+            else if (Computer == 2)
+            {
+              
+              lblWins.Text = Losses.ToString();
+            }
+            else if (Computer == 3)
+            {
+              
+              lblTies.Text = Wins.ToString();
+            }
+
         }
 
         private void btnTaunt_Click(object sender, EventArgs e)
         {
             lblTaunt.Visible = true;
             btnReset.Enabled = true;
-        
-
-
         }
 
-        private void btnInstructions_Click(object sender, EventArgs e)
+        private void btnRemove_Click(object sender, EventArgs e)
         {
-            
+            btnTaunt.Enabled = false;
+            lblTaunt.Visible = false;
+            btnRemove.Visible = false;
         }
     }
 }
