@@ -84,9 +84,9 @@ namespace Rock__Paper__Scissors_Project
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            Ties = Ties + 1;
-            Wins = Wins + 1;
-            Losses = Losses + 1;
+            
+            
+            
             number = number + 1;
             lblRounds.Text = number.ToString();
             btnReset.Enabled = true;
@@ -106,18 +106,18 @@ namespace Rock__Paper__Scissors_Project
 
             if (Computer == 1)
             {
-               
-               lblTies.Text = Ties.ToString();
+                    Ties = Ties + 1;
+                    lblTies.Text = Ties.ToString();
             }
             else if (Computer == 2)
             {
-                    
+                    Losses = Losses + 1;
                     lblLosses.Text = Losses.ToString();
             }
             else if (Computer == 3)
             {
-               
-               lblWins.Text = Wins.ToString();
+                    Wins = Wins + 1;
+                    lblWins.Text = Wins.ToString();
             }
 
             //paper
@@ -125,17 +125,17 @@ namespace Rock__Paper__Scissors_Project
 
             if (Computer == 1)
             {
-               
-               lblWins.Text = Ties.ToString();
+                    Wins = Wins + 1;
+                    lblWins.Text = Ties.ToString();
             }
             else if (Computer == 2)
             {
-              
-               lblTies.Text = Losses.ToString();
+                    Ties = Ties + 1;
+                    lblTies.Text = Losses.ToString();
             }
             else if (Computer == 3)
             {
-                    
+                    Losses = Losses + 1;
                     lblLosses.Text = Wins.ToString();
             }
 
@@ -144,18 +144,18 @@ namespace Rock__Paper__Scissors_Project
 
             if (Computer == 1)
             {
-                    
+                    Losses = Losses + 1;
                     lblLosses.Text = Ties.ToString();
             }
             else if (Computer == 2)
             {
-              
-              lblWins.Text = Losses.ToString();
+                    Wins = Wins + 1;
+                    lblWins.Text = Losses.ToString();
             }
             else if (Computer == 3)
             {
-              
-              lblTies.Text = Wins.ToString();
+                    Ties = Ties + 1;
+                    lblTies.Text = Wins.ToString();
             }
 
         }
